@@ -7,8 +7,8 @@ class Menu:
         print("Menu:")
         print("1. Insertar Datos")
         print("2. Mostrar Lista")
-        print("3. Ordenar Datos")
-        print("4. Mostrar Resultado Ordenado")
+        print("3. Buscar Dato")
+        print("4. Eliminar Primer Elemento")
         print("5. Salir")
         result = None
         opcion = int(input("Selecciona la opción: "))
