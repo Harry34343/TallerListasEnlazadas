@@ -9,7 +9,11 @@ class Menu:
         print("2. Mostrar Lista")
         print("3. Buscar Dato")
         print("4. Eliminar Primer Elemento")
-        print("5. Salir")
+        print("5. Eliminar Por Valor")
+        print("6. Tamaño de la Lista")
+        print("7. Invertir Lista")
+        print("8. Ordenar Lista")
+        print("9. Salir")
         result = None
         opcion = int(input("Selecciona la opción: "))
         if (opcion == 1):
@@ -25,11 +29,9 @@ class Menu:
                     lista.insert_at_end(data)
         elif opcion == 2:
             lista.recorrer()
-        elif opcion == 3:
+        elif opcion == 8:
             lista.ordenar()
-        elif opcion == 4:
-            lista.recorrerOrdenado()
-        elif opcion == 5:
+        elif opcion == 9:
             break
 
 
