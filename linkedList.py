@@ -37,7 +37,7 @@ class linkedList:
     def Search(self, data):
         current = self.head
         i=0
-        while current.next is not None:
+        while current is not None:
             if (current.data == data):
                 return i
             current = current.next
