@@ -17,11 +17,10 @@ class Menu:
         result = None
         opcion = int(input("Selecciona la opción: "))
         if (opcion == 1):
-            while result is None and result is not (1 or 2 or 3):
-                data = int(input("Digita el dato a ingresar:"))
+            data = int(input("Digita el dato a ingresar:"))
+            while result is None or (result != 1 and result !=2):
                 print("1. Insertar al Inicio ")
                 print("2. Insertar al Final ")
-                print("3. Insertar en posición deseada ")
                 result = int(input("Selecciona la opción: "))
                 if result == 1:
                     lista.insert_at_beginning(data)
@@ -29,6 +28,19 @@ class Menu:
                     lista.insert_at_end(data)
         elif opcion == 2:
             lista.recorrer()
+        elif opcion == 3:
+            val = int(input("Digite el valor a buscar: "))
+            x =lista.search(val)
+            print("El dato se encuentra en la posición: "+str(x))
+        elif opcion == 4:
+            lista.delete_first()
+        elif opcion == 5:
+            val = int(input("Digite el valor a eliminar: "))
+            lista.delete_by_value(val)
+        elif opcion == 6:
+            print("Tamaño de la lista:", lista.size())
+        elif opcion == 7:
+            lista.invertir()
         elif opcion == 8:
             lista.ordenar()
         elif opcion == 9:

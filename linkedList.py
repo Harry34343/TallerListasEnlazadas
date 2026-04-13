@@ -40,19 +40,55 @@ class linkedList:
         return -1
 
     def ordenar(self):
+        intercambio = True
+        while intercambio:
+            intercambio = False
+            current = self.head
+            prev = None
+            while current.next:
+                next_node = current.next
+                if current.data > next_node.data:
+                    current.next = next_node.next
+                    next_node.next = current
+                    if not prev:
+                        self.head = next_node
+                    else:
+                        prev.next = next_node
+                    prev = next_node
+                    intercambio = True
+                else:
+                    prev = current
+                    current = current.next
+
+
+
+    def invertir(self):
         current = self.head
+        prev = None
         while current is not None:
             next_node = current.next
-            while next_node is not None:
-                if current.data > next_node.data:
-                    temp = current.data
-                    next_node.data = temp
-                    current.data = next_node.data
-                next_node = next_node.next
-            current = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
+        
+            
+    def delete_first(self):
+        if self.head is not None:
+            self.head = self.head.next 
 
-    def recorrerOrdenado(self):
-        newLinkedList = linkedList()
-        newLinkedList.head = self.head
-        newLinkedList.ordenar()
-        newLinkedList.recorrer()
+    def delete_by_value(self, data):
+        current = self.head
+        while current is not None:
+            if current.data == data:
+                current = current.next
+                return
+            current = current.next
+    
+    def size(self):
+        count = 0
+        current = self.head
+        while current is not None:
+            count += 1
+            current = current.next
+        return count
