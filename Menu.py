@@ -27,22 +27,22 @@ class Menu:
                 elif result == 2:
                     lista.insert_at_end(data)
         elif opcion == 2:
-            lista.recorrer()
+            lista.Mostrar()
         elif opcion == 3:
             val = int(input("Digite el valor a buscar: "))
             x =lista.search(val)
             print("El dato se encuentra en la posición: "+str(x))
         elif opcion == 4:
-            lista.delete_first()
+            lista.DeleteFirst()
         elif opcion == 5:
             val = int(input("Digite el valor a eliminar: "))
-            lista.delete_by_value(val)
+            lista.DeleteByValor(val)
         elif opcion == 6:
             print("Tamaño de la lista:", lista.size())
         elif opcion == 7:
-            lista.invertir()
+            lista.Invertir()
         elif opcion == 8:
-            lista.ordenar()
+            lista.Ordenar()
         elif opcion == 9:
             break
 
