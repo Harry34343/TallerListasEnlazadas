@@ -30,7 +30,7 @@ class Menu:
             lista.Mostrar()
         elif opcion == 3:
             val = int(input("Digite el valor a buscar: "))
-            x =lista.search(val)
+            x =lista.Search(val)
             print("El dato se encuentra en la posición: "+str(x))
         elif opcion == 4:
             lista.DeleteFirst()
