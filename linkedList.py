@@ -27,12 +27,15 @@ class linkedList:
     def DeleteFirst(self):
         if self.head is not None:
             self.head = self.head.next
+
     def DeleteByValor(self, data):
         current = self.head
-        while current.next is not None:
+        prev = None
+        while current is not None:
             if (current.data == data):
-                current = current.next
+                prev.next = current.next
                 return
+            prev = current
             current = current.next
     def Search(self, data):
         current = self.head
